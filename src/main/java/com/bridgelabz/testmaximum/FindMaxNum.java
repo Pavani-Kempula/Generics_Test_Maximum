@@ -29,4 +29,15 @@ public class FindMaxNum {
         }
         return maxNumber;
     }
+
+    public String findMaxInString(String num1, String num2, String num3) {
+        String maxNumber = num1;
+        if (num2.compareTo(maxNumber) > 0){
+            maxNumber = num2;
+        }
+        if (num3.compareTo(maxNumber) > 0){
+            maxNumber = num3;
+        }
+        return maxNumber;
+    }
 }

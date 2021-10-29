@@ -23,6 +23,7 @@ public class FindMaxNumTest {
         int result = findMaxNum.findMaxIntNumber(30,50,100);
         Assert.assertEquals(100, result);
     }
+
     @Test
     public void givenThreeFloatNumber_shouldReturn_firstNumberIsMaximum(){
         float result = findMaxNum.findMaxFloatNumber(10.0F, 5.0F, 3.0F);
@@ -38,5 +39,22 @@ public class FindMaxNumTest {
     public void givenThreeFloatNumber_shouldReturn_thirdNumberIsMaximum(){
         float result = findMaxNum.findMaxFloatNumber(3.0F, 5.0F, 10.0F);
         Assert.assertEquals(10.0, result,0.0);
+    }
+
+    @Test
+    public void givenThreeStrings_shouldReturn_firstStringIsMaximum(){
+        String result = findMaxNum.findMaxInString("Peach", "Apple", "Banana");
+        Assert.assertEquals("Peach", result);
+    }
+
+    @Test
+    public void givenThreeStrings_shouldReturn_secondStringIsMaximum(){
+        String result = findMaxNum.findMaxInString("Apple", "Peach", "Banana");
+        Assert.assertEquals("Peach", result);
+    }
+    @Test
+    public void givenThreeStrings_shouldReturn_thirdStringIsMaximum(){
+        String result = findMaxNum.findMaxInString("Banana", "Apple", "Peach");
+        Assert.assertEquals("Peach", result);
     }
 }
