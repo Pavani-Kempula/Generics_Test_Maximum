@@ -26,6 +26,11 @@ public class FindMaxNum<E extends  Comparable<E>> {
                 max = element;
             }
         }
+        printMaximum(max);
         return max;
+    }
+
+    public static <E> void printMaximum(E max){
+        System.out.println("Maximum Value is:" + max);
     }
 }
