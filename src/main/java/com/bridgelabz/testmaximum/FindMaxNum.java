@@ -9,32 +9,23 @@ package com.bridgelabz.testmaximum;
  */
 
 public class FindMaxNum<E extends  Comparable<E>> {
-    E value1;
-    E value2;
-    E value3;
-
-    public FindMaxNum(E value1, E value2, E value3) {
-        this.value1 = value1;
-        this.value2 = value2;
-        this.value3 = value3;
-    }
-
-    public FindMaxNum() {
-
+    E[] inputArray;
+    public FindMaxNum(E[] inputArray) {
+        this.inputArray = inputArray;
     }
 
     public E findMax() {
-        return FindMaxNum.findMax(value1, value2, value3);
+        E result = findMax(inputArray);
+        return result;
     }
 
-    public static <E extends Comparable> E findMax(E value1, E value2, E value3) {
-        E maxNumber = value1;
-        if (value2.compareTo(maxNumber) > 0) {
-            maxNumber = value2;
+    public static <E extends Comparable> E findMax(E[] inputArray) {
+        E max = inputArray[0];
+        for (E element : inputArray) {
+            if (element.compareTo(max) > 0) {
+                max = element;
+            }
         }
-        if (value3.compareTo(maxNumber) > 0) {
-            maxNumber = value3;
-        }
-        return maxNumber;
+        return max;
     }
 }
